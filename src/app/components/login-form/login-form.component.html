@@ -1,0 +1,6 @@
+<form [formGroup]="form" (submit)="onSubmit()" class="flex flex-col">
+  <app-input formControlName="username" type="email"></app-input>
+
+  <app-input formControlName="password" type="password"></app-input>
+  <button type="submit">submit</button>
+</form>

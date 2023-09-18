@@ -6,6 +6,7 @@ import { authGuard } from './guards/auth.guard';
 import { LayoutModule } from './layout/layout.module';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { FooterOnlyLayoutComponent } from './layout/footer-only-layout/footer-only-layout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // const routes: Routes = [
 //   {
@@ -75,7 +76,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), LayoutModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    LayoutModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
